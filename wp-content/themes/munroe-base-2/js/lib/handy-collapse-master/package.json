@@ -1,0 +1,50 @@
+{
+  "name": "handy-collapse",
+  "version": "1.0.4",
+  "description": "A pure Javascript module for accordion/collapse UI without JQuery",
+  "main": "dist/index.js",
+  "author": "R Sakai",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sk-rt/handy-collapse.git"
+  },
+  "keywords": [
+    "js",
+    "vanillajs",
+    "micro",
+    "collapse",
+    "accordion",
+    "ui",
+    "slidedown",
+    "dropdown",
+    "typescript"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack serve --mode development",
+    "build": "NODE_ENV=production webpack --mode production",
+    "dist": "yarn clean && yarn build && yarn build-declaration && yarn sample-dist",
+    "build-declaration": "tsc src/index.ts -d --emitDeclarationOnly --declarationDir ./dist",
+    "sample-dist": "cpx dist/standalone/* sample/js/",
+    "clean": "rimraf dist",
+    "prepare": "yarn dist",
+    "publish": "npm publish"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
+    "cpx": "^1.5.0",
+    "eslint": "^7.25.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "ts-loader": "^9.1.2",
+    "typescript": "^4.2.4",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {}
+}

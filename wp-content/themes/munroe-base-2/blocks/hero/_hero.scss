@@ -1,0 +1,40 @@
+.hero {
+	margin-top: 0;
+	padding: 0;
+	position: relative;
+
+	.info {
+		position: absolute;
+		top: 50%;
+		left: calc(50% - 600px);
+		max-width: 568px;
+		width: 100%;
+		transform: translateY(-50%);
+		@media screen and (max-width: 1320px) {
+			left: calc(1rem + 2%);
+			top: unset;
+			bottom: 0px;
+			width: calc(96% - 2rem);
+		}
+
+		* {
+			color: #fff;
+		}
+	}
+	.image-hero__wrap {
+		width: 100%;
+		height: calc(100vh - 93px);
+		background: red;
+		overflow: hidden;
+
+		img {
+			object-fit: cover;
+			height: 100%;
+			width: 100%;
+			object-position: center;
+		}
+	}
+}
+
+
+
